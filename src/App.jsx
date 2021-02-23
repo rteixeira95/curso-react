@@ -9,13 +9,15 @@ import AleatorioFeitoPorMim from './components/basicos/AleatorioFeitoPorMim'
 import Aleatorio from './components/basicos/Aleatorio'
 import Familia from './components/basicos/Familia'
 import FamiliaMembro from './components/basicos/FamiliaMembro'
-
+import ListaAlunos from './components/repeticao/ListaAlunos'
 
 export default () =>
     <div className='App'>
         <h1>Fundamentos de React</h1>
         <div className='Cards' >
-
+            <Card titulo= "#6 -Repeticao com lista " color='#ff4c65'>
+            <ListaAlunos></ListaAlunos>
+            </Card>
             <Card titulo="#5 - Componente com filhos" color='#00C8F8'>
                 <Familia apelido='Teixeira'>
                     <FamiliaMembro nome='Rui'/>
