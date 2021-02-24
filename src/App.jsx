@@ -10,19 +10,42 @@ import Aleatorio from './components/basicos/Aleatorio'
 import Familia from './components/basicos/Familia'
 import FamiliaMembro from './components/basicos/FamiliaMembro'
 import ListaAlunos from './components/repeticao/ListaAlunos'
+import TabelaProdutos from './components/repeticao/TabelaProdutos'
+import ParOuImpar from './components/condicional/ParOuImpar'
+import If from './components/condicional/if.js'
+import Usuario from './components/condicional/UsuarioInfo'
+
+
 
 export default () =>
     <div className='App'>
         <h1>Fundamentos de React</h1>
         <div className='Cards' >
-            <Card titulo= "#6 -Repeticao com lista " color='#ff4c65'>
-            <ListaAlunos></ListaAlunos>
+        <Card titulo="#8 -Rendirizaçao Condicional (Continuação)" color='#a29e7a'>
+                <Usuario usuario={{nome: 'Fernando'}}></Usuario>
+                <Usuario usuario={{email: 'Fern@ndo.com'}}></Usuario>
+
             </Card>
-            <Card titulo="#5 - Componente com filhos" color='#00C8F8'>
+            <Card titulo="#8 -Rendirizaçao Condicional" color='#a29e7a'>
+                <If exp={2 + 2 == 4}>
+                    <span>2 + 2 = 4</span><br></br>
+                    <span>Esta exp é verdadeira</span>
+                </If>
+            </Card>
+            <Card titulo="#8 -Condicional Par ou impar " color='#982395'>
+                <ParOuImpar numero={20}></ParOuImpar>
+            </Card>
+            <Card titulo="#7 -Repeticao com lista Produtos " color='#3A9Ad9'>
+                <TabelaProdutos></TabelaProdutos>
+            </Card>
+            <Card titulo="#6 -Repeticao com lista " color='#554165'>
+                <ListaAlunos></ListaAlunos>
+            </Card>
+            <Card titulo="#5 - Componente com filhos" color='#00C212'>
                 <Familia apelido='Teixeira'>
-                    <FamiliaMembro nome='Rui'/>
-                    <FamiliaMembro nome='Ana'/>
-                    <FamiliaMembro nome='Amadeu'/>
+                    <FamiliaMembro nome='Rui' />
+                    <FamiliaMembro nome='Ana' />
+                    <FamiliaMembro nome='Amadeu' />
                 </Familia>
             </Card>
 
