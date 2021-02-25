@@ -12,7 +12,7 @@ import FamiliaMembro from './components/basicos/FamiliaMembro'
 import ListaAlunos from './components/repeticao/ListaAlunos'
 import TabelaProdutos from './components/repeticao/TabelaProdutos'
 import ParOuImpar from './components/condicional/ParOuImpar'
-import If from './components/condicional/if.js'
+import If,  {Else} from './components/condicional/If.js'
 import Usuario from './components/condicional/UsuarioInfo'
 
 
@@ -21,15 +21,20 @@ export default () =>
     <div className='App'>
         <h1>Fundamentos de React</h1>
         <div className='Cards' >
-        <Card titulo="#8 -Rendirizaçao Condicional (Continuação)" color='#a29e7a'>
-                <Usuario usuario={{nome: 'Fernando'}}></Usuario>
-                <Usuario usuario={{email: 'Fern@ndo.com'}}></Usuario>
+            <Card titulo="#8 -Rendirizaçao Condicional (Continuação)" color='#a29e7a'>
+                <Usuario usuario={{ nome: 'Fernando' }}></Usuario>
+                <Usuario usuario={{ email: 'Fern@ndo.com' }}></Usuario>
 
             </Card>
             <Card titulo="#8 -Rendirizaçao Condicional" color='#a29e7a'>
                 <If exp={2 + 2 == 4}>
-                    <span>2 + 2 = 4</span><br></br>
+                <span>2 + 2 = 4</span><br></br>
+
                     <span>Esta exp é verdadeira</span>
+                    <Else>
+                        <span>2 + 2 = 4</span><br></br>
+                        <span>Esta exp é falsa</span>
+                    </Else>
                 </If>
             </Card>
             <Card titulo="#8 -Condicional Par ou impar " color='#982395'>
